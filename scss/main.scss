@@ -1,10 +1,11 @@
 body {
   font-family: 'Source Sans Pro', 'Helvetica Neue','sans-serif';
 }
-
 $red: #b62222;
 $green: #519b00;
-
+@mixin move {
+  transition: all 0.3s ease-out;
+}
 input[type="checkbox"] {
   display: none;
 }
@@ -15,8 +16,8 @@ input[type="checkbox"] + label {
   height: 40px;
   background-color: $red;
   border-radius: 30px;
-  transition: all 0.3s ease-in-out;
   cursor: pointer;
+  @include move;
   &::before {
     content: '';
     display: inline-block;
@@ -27,6 +28,7 @@ input[type="checkbox"] + label {
     position: absolute;
     top: 3px;
     right: 4px;
+    @include move;
   }
   &::after {
     content: attr(data-deny);
@@ -36,6 +38,7 @@ input[type="checkbox"] + label {
     left: 18px;
     font-size: 24px;
     font-weight: 300;
+    @include move;
   }
 }
 input[type="checkbox"]:checked + label {
@@ -47,5 +50,4 @@ input[type="checkbox"]:checked + label {
     content: attr(data-permit);
     left: 50px;
   }
-
 }
