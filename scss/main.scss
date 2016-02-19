@@ -34,9 +34,9 @@ input[type="checkbox"] + label {
     content: attr(data-deny);
     color: white;
     position: absolute;
-    top: 4px;
+    top: 6px;
     left: 18px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 300;
     @include move;
   }
@@ -48,6 +48,6 @@ input[type="checkbox"]:checked + label {
   }
   &::after {
     content: attr(data-permit);
-    left: 50px;
+    left: 56px;
   }
 }
