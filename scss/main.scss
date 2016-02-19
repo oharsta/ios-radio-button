@@ -2,7 +2,6 @@ body {
   font-family: 'Source Sans Pro', 'Helvetica Neue','sans-serif';
 }
 
-$blue: #4db3cf;
 $red: #b62222;
 $green: #519b00;
 
@@ -31,7 +30,6 @@ input[type="checkbox"] + label {
   }
   &::after {
     content: attr(data-deny);
-    display: inline-block;
     color: white;
     position: absolute;
     top: 4px;
